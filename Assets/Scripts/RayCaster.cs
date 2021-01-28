@@ -38,7 +38,7 @@ public class RayCaster : MonoBehaviour
                 if (pickup != null) pickup.PlayerInteract();
 
                 ItemGrab grab = hit.transform.GetComponent<ItemGrab>();
-                if (pickup != null) pickup.PlayerInteract();
+                if (grab != null) grab.PlayerInteract();
 
 
 

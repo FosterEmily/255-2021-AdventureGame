@@ -6,9 +6,9 @@ public class ItemPickup : MonoBehaviour
 {
     public void PlayerInteract()
     {
-       // Inventory.main.hasKey = true;
+        // Inventory.main.hasKey = true;
         //remeber we picked up the object
-
+        print("Picked Up");
         Destroy(gameObject);
     }
 

@@ -12,17 +12,18 @@ public class ItemGrab : MonoBehaviour
     public void PlayerInteract()
     {
         print("grab");
-        //offset = gameObject.transform.position - GetMouseWorldPos();
+        mouseZLocation = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
+        offset = gameObject.transform.position - GetMouseWorldPos();
 
-        ///transform.position = GetMouseWorldPos() + offset;
+        transform.position = GetMouseWorldPos() + offset;
 
     }
-   // private Vector3 GetMouseWorldPos()
-   // {
+    private Vector3 GetMouseWorldPos()
+    {
         //get location of mouse
- //       Vector3 mousePoint = Input.mousePosition;
- //       mousePoint.z = mouseZLocation;
- //       return Camera.main.ScreenToWorldPoint(mousePoint);
-//    }
+        Vector3 mousePoint = Input.mousePosition;
+        mousePoint.z = mouseZLocation;
+        return Camera.main.ScreenToWorldPoint(mousePoint);
+    }
 
 }
