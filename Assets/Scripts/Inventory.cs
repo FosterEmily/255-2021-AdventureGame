@@ -13,9 +13,9 @@ public class Inventory : MonoBehaviour
     }
 
     public bool hasKey = false;
-    public bool hasPicture01 = false;
-    public bool hasPicture02 = false;
-    public bool hasPicture03 = false;
+    public bool hasPhoto01 = false;
+    public bool hasPhoto02 = false;
+    public bool hasPhoto03 = false;
     public bool hasCalendar = false;
    // public bool 
 

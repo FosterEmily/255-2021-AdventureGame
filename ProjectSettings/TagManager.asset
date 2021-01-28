@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Key
+  - Photo01
+  - Photo02
+  - Photo03
+  - Calendar
   layers:
   - Default
   - TransparentFX
