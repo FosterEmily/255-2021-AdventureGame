@@ -41,7 +41,8 @@ public class RayCaster : MonoBehaviour
                 if (grab != null) grab.PlayerInteract();
 
 
-
+                DrawerOpen open = hit.transform.GetComponent<DrawerOpen>();
+                if (open != null) open.DrawerControl();
             }
 
         }

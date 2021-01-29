@@ -47,7 +47,7 @@ public class ItemGrab : MonoBehaviour
             item.GetComponent<Rigidbody>().isKinematic = false;
             item.transform.position = objectPos;
         }
-        print(item.transform.position);
+        //print(item.transform.position);
 
     }
 
