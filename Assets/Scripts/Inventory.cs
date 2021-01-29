@@ -7,6 +7,7 @@ public class Inventory : MonoBehaviour
 
     //singleton design pattern
     private static Inventory _main = new Inventory();
+    
     public static Inventory main
     {
         get { return _main; }
@@ -17,7 +18,9 @@ public class Inventory : MonoBehaviour
     public bool hasPhoto02 = false;
     public bool hasPhoto03 = false;
     public bool hasCalendar = false;
-   // public bool 
+
+
+    // public bool 
 
 
     private void Start()
@@ -34,5 +37,4 @@ public class Inventory : MonoBehaviour
             Destroy(gameObject); //destroy extra inventory sytem
         }
     }
-
 }

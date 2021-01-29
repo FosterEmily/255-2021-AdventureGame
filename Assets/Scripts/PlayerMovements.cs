@@ -12,6 +12,7 @@ public class PlayerMovements : MonoBehaviour
     [SerializeField] float gravity = -13.0f;
     [SerializeField] [Range(0.0f, 0.5f)] float moveSmoothTime = 0.3f;
     [SerializeField] [Range(0.0f, 0.5f)] float mouseSmoothTime = 0.03f;
+    [SerializeField] GameObject inventoryObj;
 
     [SerializeField] bool lockCursor = true;
 
@@ -47,7 +48,11 @@ public class PlayerMovements : MonoBehaviour
         UpdateMouseLook();
         UpdateMovement();
 
-
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (inventoryObj.activeSelf == false) inventoryObj.SetActive(true);
+            else inventoryObj.SetActive(false);
+        }
     }
 
     //Camera movements
