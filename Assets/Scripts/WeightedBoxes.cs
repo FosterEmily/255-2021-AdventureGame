@@ -5,7 +5,7 @@ using UnityEngine;
 public class WeightedBoxes : MonoBehaviour
 {
 
-    public float boxWeight = 0;
+    public float boxWeight = 0f;
 
 
     void Start()
@@ -16,6 +16,6 @@ public class WeightedBoxes : MonoBehaviour
     
     void Update()
     {
-        
+       // print(boxWeight);  
     }
 }

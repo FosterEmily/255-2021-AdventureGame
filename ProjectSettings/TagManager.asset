@@ -9,6 +9,9 @@ TagManager:
   - Photo02
   - Photo03
   - Calendar
+  - BoxWeight3
+  - ScaleOne
+  - ScaleTwo
   layers:
   - Default
   - TransparentFX
