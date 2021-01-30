@@ -45,14 +45,32 @@ public class PlayerMovements : MonoBehaviour
     void Update()
     {
 
-        UpdateMouseLook();
+        if (inventoryObj.activeSelf == false)
+        {
+            UpdateMouseLook();
+            Time.timeScale = 1;
+        }
+        else Time.timeScale = 0;
         UpdateMovement();
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (inventoryObj.activeSelf == false) inventoryObj.SetActive(true);
-            else inventoryObj.SetActive(false);
+            if (inventoryObj.activeSelf == false)
+            {
+                inventoryObj.SetActive(true);
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+            }
+            else
+            {
+                inventoryObj.SetActive(false);
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
         }
+        //Press the space bar to apply no locking to the Cursor
+
+
     }
 
     //Camera movements

@@ -5,7 +5,7 @@ using UnityEngine;
 public class RayCaster : MonoBehaviour
 {
     private Camera cam;
-
+    [SerializeField] Animator crosshairAnim;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +16,7 @@ public class RayCaster : MonoBehaviour
     void Update()
     {
         //did the user click on this game tick?
-        if (cam != null && Input.GetButtonDown("Fire1"))
+        if (cam != null)
         {
             //shoot a ray into the scene
 
@@ -30,22 +30,21 @@ public class RayCaster : MonoBehaviour
             if (Physics.Raycast(ray, out hit))
             {
                 //raycast hit controller in scene
-
                 DoorController door = hit.transform.GetComponentInParent<DoorController>();
-                if (door != null) door.PlayerInteract(transform.parent.position);
-
                 DrawerController drawer = hit.transform.GetComponentInParent<DrawerController>();
-                if (door != null) drawer.PlayerInteract(transform.parent.position);
-
                 ItemPickup pickup = hit.transform.GetComponent<ItemPickup>();
-                if (pickup != null) pickup.PlayerInteract();
-
                 ItemGrab grab = hit.transform.GetComponent<ItemGrab>();
-                if (grab != null) grab.PlayerInteract();
-
-
                 DrawerOpen open = hit.transform.GetComponent<DrawerOpen>();
-                if (open != null) open.DrawerControl();
+                if (open != null || grab != null || pickup != null || drawer != null || door != null) crosshairAnim.SetBool("isHighlight", true);
+                else crosshairAnim.SetBool("isHighlight", false);
+                if (Input.GetButtonDown("Fire1"))
+                {
+                    if (open != null) open.DrawerControl();
+                    if (grab != null) grab.PlayerInteract();
+                    if (pickup != null) pickup.PlayerInteract();
+                    if (drawer != null) drawer.PlayerInteract(transform.parent.position);
+                    if (door != null) door.PlayerInteract(transform.parent.position);
+                }
             }
 
         }
