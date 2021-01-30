@@ -20,45 +20,29 @@ public class Scales : MonoBehaviour
    
     void Update()
     {
-        print(scaleWon);
-       // print(doOnce);
-
         if (weightOnScale == targetWeight)
         {
             if (this.tag == "ScaleOne") ScaleControl.scaleOne = true;
             if (this.tag == "ScaleTwo") ScaleControl.scaleTwo = true;
 
         }
-
-       
-
-           // print(weightOnScale);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        
-
-       
         if(other.CompareTag("BoxWeight3") )
         {
             weightOnScale += other.gameObject.GetComponent<WeightedBoxes>().boxWeight;
            
 
         }
-
     }
 
     private void OnTriggerExit(Collider other)
     {
-        
-    
-
         if (other.CompareTag("BoxWeight3"))
         {
             weightOnScale -= other.gameObject.GetComponent<WeightedBoxes>().boxWeight;
-           
         }
-
     }
 }

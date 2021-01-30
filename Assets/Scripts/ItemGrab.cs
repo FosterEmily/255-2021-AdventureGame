@@ -11,7 +11,6 @@ public class ItemGrab : MonoBehaviour
     float throwForce = 600;
     Vector3 objectPos;
     float distance;
-
     public bool canHold = true;
     public GameObject item;
     public GameObject tempParent;
@@ -20,22 +19,17 @@ public class ItemGrab : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-
         distance = Vector3.Distance(item.transform.position, tempParent.transform.position);
         //Check if isholding
         if (isHolding == true)
         {
             item.GetComponent<Rigidbody>().velocity = Vector3.zero;
             item.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
-            item.transform.SetParent(tempParent.transform);
-            item.GetComponent<Rigidbody>().detectCollisions = true;
+            //yeet
             if (Input.GetMouseButtonDown(1))
             {
-                
                 item.GetComponent<Rigidbody>().AddForce(tempParent.transform.forward * throwForce);
-                print(tempParent.transform.forward * throwForce);
                 isHolding = false;
-
             }
             if (Input.GetMouseButtonUp(0)) isHolding = false;
         }
@@ -47,13 +41,13 @@ public class ItemGrab : MonoBehaviour
             item.GetComponent<Rigidbody>().isKinematic = false;
             item.transform.position = objectPos;
         }
-        //print(item.transform.position);
-
     }
-
-    public void OnMouseDown()
+    public void OnCollisionEnter(Collision collision)
     {
-
+        if (collision.gameObject.tag == "Player")
+        {
+            Physics.IgnoreCollision(collision.collider, item.GetComponent<Collider>());
+        }
     }
     public void OnMouseUp()
     {
@@ -63,20 +57,7 @@ public void PlayerInteract()
     {
         isHolding = true;
         item.GetComponent<Rigidbody>().useGravity = false;
-        item.GetComponent<Rigidbody>().isKinematic = true;
         item.GetComponent<Rigidbody>().detectCollisions = true;
-        //mouseZLocation = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
-        //offset = gameObject.transform.position - GetMouseWorldPos();
-
-        //transform.position = GetMouseWorldPos() + offset;
-
+        item.transform.SetParent(tempParent.transform);
     }
-    //private Vector3 GetMouseWorldPos()
-    //{
-        //get location of mouse
-        //Vector3 mousePoint = Input.mousePosition;
-        //mousePoint.z = mouseZLocation;
-        //return Camera.main.ScreenToWorldPoint(mousePoint);
-    //}
-
 }

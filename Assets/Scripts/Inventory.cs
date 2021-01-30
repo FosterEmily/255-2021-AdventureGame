@@ -17,12 +17,10 @@ public class Inventory : MonoBehaviour
     public bool hasPhoto01 = false;
     public bool hasPhoto02 = false;
     public bool hasPhoto03 = false;
+    public bool hasTruck = false;
+    public bool hasTeddy = false;
+    public bool hasDino = false;
     public bool hasCalendar = false;
-
-
-    // public bool 
-
-
     private void Start()
     {
         if (_main == null)
@@ -30,7 +28,6 @@ public class Inventory : MonoBehaviour
             _main = this;
             DontDestroyOnLoad(gameObject);
             //dont destroy this object when loading a new scenes
-
         }
         else
         {

@@ -18,7 +18,6 @@ public class ResetLocation : MonoBehaviour
     {
         if ((this.transform.position.y < 0 || this.transform.position.y > 12) && this.transform.parent == null)
         {
-            print("worked");
             this.GetComponent<Rigidbody>().velocity = Vector3.zero;
             this.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
             this.transform.position = startingLoc;

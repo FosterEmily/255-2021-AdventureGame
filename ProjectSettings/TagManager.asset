@@ -12,6 +12,9 @@ TagManager:
   - BoxWeight3
   - ScaleOne
   - ScaleTwo
+  - Truck
+  - Dino
+  - Teddy
   layers:
   - Default
   - TransparentFX

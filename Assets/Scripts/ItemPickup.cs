@@ -10,10 +10,12 @@ public class ItemPickup : MonoBehaviour
        if(this.tag == "Photo01") Inventory.main.hasPhoto01 = true;
        if(this.tag == "Photo02") Inventory.main.hasPhoto02 = true;
        if(this.tag == "Photo03") Inventory.main.hasPhoto03 = true;
+       if(this.tag == "Truck") Inventory.main.hasTruck = true;
+       if(this.tag == "Teddy") Inventory.main.hasTeddy = true;
+       if(this.tag == "Dino") Inventory.main.hasDino = true;
        if(this.tag == "Calendar") Inventory.main.hasCalendar = true;
         //remeber we picked up the object
         print("Picked Up" + this.tag);
         Destroy(gameObject);
     }
-
 }

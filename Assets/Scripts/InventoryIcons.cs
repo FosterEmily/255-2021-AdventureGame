@@ -8,13 +8,10 @@ public class InventoryIcons : MonoBehaviour
     [SerializeField] GameObject photo1Img;
     [SerializeField] GameObject photo2Img;
     [SerializeField] GameObject photo3Img;
+    [SerializeField] GameObject truckImg;
+    [SerializeField] GameObject teddyImg;
+    [SerializeField] GameObject dinoImg;
     [SerializeField] GameObject calendar;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -23,5 +20,8 @@ public class InventoryIcons : MonoBehaviour
         if (Inventory.main.hasPhoto02) photo2Img.SetActive(true);
         if (Inventory.main.hasPhoto03) photo3Img.SetActive(true);
         if (Inventory.main.hasCalendar) calendar.SetActive(true);
+        if (Inventory.main.hasTruck) truckImg.SetActive(true);
+        if (Inventory.main.hasTeddy) teddyImg.SetActive(true);
+        if (Inventory.main.hasDino) dinoImg.SetActive(true);
     }
 }
