@@ -37,7 +37,8 @@ public class RayCaster : MonoBehaviour
                 ItemGrab grab = hit.transform.GetComponent<ItemGrab>();
                 DrawerOpen open = hit.transform.GetComponent<DrawerOpen>();
                 LightControl light = hit.transform.GetComponent<LightControl>();
-                if (open != null || grab != null || pickup != null || drawer != null || door != null || light != null || wardrobe != null) crosshairAnim.SetBool("isHighlight", true);
+                PinPadPuzzle pin = hit.transform.GetComponent<PinPadPuzzle>();
+                if (open != null || grab != null || pickup != null || drawer != null || door != null || light != null || wardrobe != null || pin != null) crosshairAnim.SetBool("isHighlight", true);
                 else crosshairAnim.SetBool("isHighlight", false);
                 if (Input.GetButtonDown("Fire1"))
                 {
@@ -48,6 +49,7 @@ public class RayCaster : MonoBehaviour
                     if (door != null) door.PlayerInteract(transform.parent.position);
                     if (wardrobe != null) wardrobe.PlayerInteract(transform.parent.position);
                     if (light != null) light.TurnLight();
+                    if (pin != null) pin.PushButton();
                 }
             }
         }

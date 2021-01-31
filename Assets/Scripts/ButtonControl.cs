@@ -34,4 +34,9 @@ public class ButtonControl : MonoBehaviour
         Application.Quit();
 
     }
+    public void toMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+
+    }
 }
