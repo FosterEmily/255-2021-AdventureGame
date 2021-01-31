@@ -25,10 +25,12 @@ public class PinPadControl : MonoBehaviour
                 if (pinNum == "1127")
                 {
                     wonPin = true;
+                    
+                    
                 }
                 pinNum = null;
             }
         }
-        if (wonPin) print("win");
+        // print(wonPin);
     }
 }
