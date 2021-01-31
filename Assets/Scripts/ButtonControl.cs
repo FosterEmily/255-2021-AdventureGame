@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class ButtonControl : MonoBehaviour
 {
@@ -19,5 +21,17 @@ public class ButtonControl : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         PlayerMovements.gameScreen = 0;
+    }
+
+    public void Play()
+    {
+        SceneManager.LoadScene("GameJam");
+
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+
     }
 }
