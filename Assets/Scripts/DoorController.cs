@@ -39,21 +39,25 @@ public class DoorController : MonoBehaviour
                 isAnimPlaying = false;
             }
 
-            doorArt.localRotation = Quaternion.Euler(0, doorAngle * percent, 0);
+            doorArt.localRotation = Quaternion.Euler(0, doorAngle * percent, 0 );
         }
 
     }
 
     public void PlayerInteract(Vector3 position)
     {
+
+        print("ISTOUCHING");
+        print(isAnimPlaying);
+        print(doorAngle);
         if (isAnimPlaying) return; // does nothing
 
-        if (!Inventory.main.hasKey) return;
+     
 
-        Vector3 disToPlayer = position - transform.position;
+       Vector3 disToPlayer = position - transform.position;
         disToPlayer = disToPlayer.normalized;
 
-        bool playerOnOtherSide = Vector3.Dot(disToPlayer, transform.right) > 0f;
+       bool playerOnOtherSide = Vector3.Dot(disToPlayer, transform.forward) > 0f;
 
         isClosed = !isClosed; // toggles state
 
