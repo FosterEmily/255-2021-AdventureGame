@@ -21,6 +21,7 @@ public class Inventory : MonoBehaviour
     public bool hasTeddy = false;
     public bool hasDino = false;
     public bool hasCalendar = false;
+    public bool hasShoe = false;
     private void Start()
     {
         if (_main == null)

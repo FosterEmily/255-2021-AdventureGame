@@ -9,6 +9,7 @@ public class ScaleControl : MonoBehaviour
 
    public static bool scaleOne = false;
    public static bool scaleTwo = false;
+   public static bool wonScale = false;
 
     void Start()
     {
@@ -20,6 +21,7 @@ public class ScaleControl : MonoBehaviour
     {
         if (scaleOne && scaleTwo)
         {
+            wonScale = true;
             Destroy(DoorBlocker01);
             Destroy(DoorBlocker02);
         }

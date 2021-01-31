@@ -7,7 +7,7 @@ public class PinPadControl : MonoBehaviour
 {
     public static string pinNum = null;
     [SerializeField] Text pinText;
-    public bool wonPin = false; 
+    public static bool wonPin = false; 
     // Start is called before the first frame update
     void Start()
     {

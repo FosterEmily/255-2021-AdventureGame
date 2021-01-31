@@ -12,6 +12,7 @@ public class InventoryIcons : MonoBehaviour
     [SerializeField] GameObject teddyImg;
     [SerializeField] GameObject dinoImg;
     [SerializeField] GameObject calendar;
+    [SerializeField] GameObject shoeImg;
     // Update is called once per frame
     void Update()
     {
@@ -23,5 +24,6 @@ public class InventoryIcons : MonoBehaviour
         if (Inventory.main.hasTruck) truckImg.SetActive(true);
         if (Inventory.main.hasTeddy) teddyImg.SetActive(true);
         if (Inventory.main.hasDino) dinoImg.SetActive(true);
+        if (Inventory.main.hasShoe) shoeImg.SetActive(true);
     }
 }
