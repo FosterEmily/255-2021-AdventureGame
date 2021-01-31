@@ -15,7 +15,7 @@ public class SortingControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (numInDonate == 5) print("5 in");
+
     }
     //private void OnTriggerEnter(Collider other)
     ///{

@@ -18,6 +18,7 @@ public class SortingItem : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Donate") SortingControl.numInDonate++;
+        print(SortingControl.numInDonate);
     }
     private void OnTriggerExit(Collider other)
     {
