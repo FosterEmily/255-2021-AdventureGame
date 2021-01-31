@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/GameJam.unity
     guid: 5c80608c42a54c346a7cc1d664840f90
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: f07cd760f7719814bbd322f94063c608
   m_configObjects: {}
