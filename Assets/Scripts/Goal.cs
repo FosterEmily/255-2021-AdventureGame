@@ -19,8 +19,8 @@ public class Goal : MonoBehaviour
         else if (Inventory.main.hasKey) goalText.text = ("Almost forgot my shoes.");
         else if (PinPadControl.wonPin) goalText.text = ("...I just need my key.");
         else if (SortingControl.hasWonSort) goalText.text = ("What was the PIN again?");
-        else if (PhotoPuzzle.hasPhotos) goalText.text = ("Theres not much room at the new house so we are keeping 's 3 favourite toys and donating the rest. I need to sort them.");
-        else if (ScaleControl.wonScale) goalText.text = ("I need to grab my three pictures of X");
+        else if (PhotoPuzzle.hasPhotos) goalText.text = ("Theres not much room at the new house so we are only keeping Mitsuo's 3 favourite toys and donating the rest. I need to sort them.");
+        else if (ScaleControl.wonScale) goalText.text = ("I need to grab my three pictures of Mitsuo");
         else if (!ScaleControl.wonScale) goalText.text = ("I should stack these boxes on those two scales. Each stack should weigh the same.");
     }
 }

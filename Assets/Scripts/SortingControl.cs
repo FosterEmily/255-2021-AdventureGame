@@ -19,8 +19,7 @@ public class SortingControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isDinoIn && isTeddyIn && isTruckIn && numInKeep == 3 && numInDonate == 7)
-            print("didIT");
+        if (isDinoIn && isTeddyIn && isTruckIn && numInKeep == 3 && numInDonate == 7) hasWonSort = true;
     }
 
 }
