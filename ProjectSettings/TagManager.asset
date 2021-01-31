@@ -15,6 +15,7 @@ TagManager:
   - Truck
   - Dino
   - Teddy
+  - Donate
   layers:
   - Default
   - TransparentFX
