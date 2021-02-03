@@ -226,14 +226,13 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.3183689, y: 1.3183689, z: 1.3183689}
-  m_Children:
-  - {fileID: 1186394800568110910}
+  m_Children: []
   m_Father: {fileID: 1983536871}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -125.4}
+  m_AnchoredPosition: {x: 0, y: -101}
   m_SizeDelta: {x: 399.1, y: 403.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &431351027
@@ -258,11 +257,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: ba3b14bbc21be0b408b21bfd1eb53194, type: 3}
-    m_FontSize: 14
+    m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 0
+    m_MaxSize: 110
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -280,15 +279,27 @@ MonoBehaviour:
 
     Kaleb Reynods - 3D Modeling
 
-    Mason Dudaryk - 3D
-    Modeling
+    Mason Dudaryk -
+    3D Modeling
 
     Tom Hodgkins - 3D Modeling
 
     Erica Blackbird - 3D Modeling
 
-    Jacqueline
-    Gembe - 2D Art
+    Daniel
+    Londick - 3D Modeling
+
+    Mitchell Root - 3D Modeling
+
+    Jacqueline Gembe
+    - 2D Art
+
+    Alex Gaukel - 3D Modeling
+
+    Andy Evans - 3D Modeling
+
+    Meghan
+    Casey - 3D Modeling
 
 '
 --- !u!222 &431351028
@@ -635,6 +646,7 @@ RectTransform:
   m_Children:
   - {fileID: 50309060}
   - {fileID: 431351026}
+  - {fileID: 1186394800568110910}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -760,14 +772,14 @@ RectTransform:
   m_GameObject: {fileID: 1186394800568110911}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3183689, y: 1.3183689, z: 1.3183689}
   m_Children: []
-  m_Father: {fileID: 431351026}
-  m_RootOrder: 0
+  m_Father: {fileID: 1983536871}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 3}
+  m_AnchoredPosition: {x: 0, y: -145}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1186394800568110911
