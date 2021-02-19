@@ -14,6 +14,8 @@ public class EndScene : MonoBehaviour
         {
 
             print(Inventory.main.hasShoe);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             SceneManager.LoadScene("EndScene");
         }
 

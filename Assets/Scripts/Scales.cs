@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Scales : MonoBehaviour
 {
     private float weightOnScale = 0f;
     private float targetWeight = 11f;
    
     public int scaleWon = 0;
-  
+    public Text scaleText; 
 
  
 
@@ -20,6 +20,7 @@ public class Scales : MonoBehaviour
    
     void Update()
     {
+        scaleText.text = weightOnScale.ToString() + ".0";
         if (weightOnScale == targetWeight)
         {
             if (this.tag == "ScaleOne") ScaleControl.scaleOne = true;
